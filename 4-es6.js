@@ -1,6 +1,7 @@
 //what is es6 javascript?
 //ES6, also known as ECMAScript 2015, is the sixth major release of the ECMAScript language specification.
 // It introduced several new features and improvements to JavaScript, making it more powerful and easier to work with.
+
 // Some of the key features of ES6 include:
 
 // 1. let and const: ES6 introduced two new ways to declare variables, let and const.
