@@ -18,6 +18,9 @@ let variableName3 = " Variable value";
 
 const variableName2 = "";
 
+//reassignment
+variableName3 = 70;
+
 //different ways to declare variables in JavaScript(3 ways)
 // 1. declaring a variable using var
 var name = "John";
