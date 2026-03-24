@@ -1,5 +1,22 @@
 // what are variables?
-// variables are containers for storing data values. They allow us to store and manipulate data in our programs. In JavaScript, we can declare variables using the var, let, or const keywords.
+//variables are storage locations for data values
+//  They allow us to store and manipulate data in our programs. In JavaScript, we can declare variables using the var, let, or const keywords.
+
+//different variable operation
+//1.declaration
+//keyword nameofVariable
+let variableName;
+var variableName1;
+
+//2.assignment
+//nameofvariable=value
+variablename = "variable value";
+
+//3.intialization
+//
+let variableName3 = " Variable value";
+
+const variableName2 = "";
 
 //different ways to declare variables in JavaScript(3 ways)
 // 1. declaring a variable using var
