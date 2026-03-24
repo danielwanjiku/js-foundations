@@ -1,6 +1,6 @@
 // 1. function to calaculate area of rrectangle
-function areaofrectangle(width, Length)
-  return width * length
+function areaofrectangle(width, Length) {
+  return width * length;
 }
 
 //2. function that converts temperatures from celcius to farenheit
@@ -11,5 +11,5 @@ function celciustofarenheit(celcius) {
 
 //3. function that calculates factorial of a given number
 function factorialofanumber(n) {
-  return n * factorialofanumber(n - 1);
+  return n * (n - 1) * (n - 2);
 }
