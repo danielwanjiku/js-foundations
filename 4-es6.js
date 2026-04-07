@@ -18,4 +18,5 @@ console.log(add(5, 3));
 
 // 3. Template Literals: ES6 introduced template literals, which allow for easier string interpolation and multi-line strings.
 const greeting = `Hello, ${name}!`;
-console.log(greeting); // Output: Hello, Alice!
+console.log(greeting); // Output: Hello,   
+     
