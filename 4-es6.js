@@ -19,4 +19,10 @@ console.log(add(5, 3));
 // 3. Template Literals: ES6 introduced template literals, which allow for easier string interpolation and multi-line strings.
 const greeting = `Hello, ${name}!`;
 console.log(greeting); // Output: Hello,   
-     
+  
+// 5. for.. of loop: ES6 introduced a new loop syntax called for.. of, which allows you to iterate over iterable objects like arrays and strings.
+const numbers = [1, 2, 3, 4, 5];
+for (const num of numbers) {
+  console.log(num);
+}   
+// Output: 1 2 3 4 5

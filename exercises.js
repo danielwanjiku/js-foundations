@@ -212,3 +212,87 @@ function calculateWaterBill(units) {
     return 10 * 20 + 20 * 15 + (units - 30) * 10;
   }
 }
+
+// Array of appliances
+const appliances = [
+  { name: "Air Conditioner", powerRating: 2000, hoursUsedPerDay: 8 },
+  { name: "Refrigerator",    powerRating: 150,  hoursUsedPerDay: 24 },
+  { name: "Washing Machine", powerRating: 500,  hoursUsedPerDay: 2 },
+  { name: "Electric Heater", powerRating: 3000, hoursUsedPerDay: 5 },
+];
+
+// Step 1: Calculate total consumption
+let totalConsumption = 0;
+
+for (let i = 0; i < appliances.length; i++) {
+  let energy = (appliances[i].powerRating * appliances[i].hoursUsedPerDay) / 1000;
+  totalConsumption = totalConsumption + energy;
+}
+
+console.log("Total Daily Consumption: " + totalConsumption + " kWh");
+
+// Step 2: Check if total is over 30 kWh
+if (totalConsumption > 30) {
+  console.log("Warning: High energy usage!");
+  console.log("Appliances using more than 20% of total:");
+
+  // Step 3: Find high consumption appliances
+  for (let i = 0; i < appliances.length; i++) {
+    let energy = (appliances[i].powerRating * appliances[i].hoursUsedPerDay) / 1000;
+    let percentage = (energy / totalConsumption) * 100;
+
+    if (percentage > 20) {
+      console.log("- " + appliances[i].name + ": " + energy + " kWh (" + percentage.toFixed(1) + "%)");
+      console.log("  Suggestion: Try reducing usage hours for " + appliances[i].name);
+    }
+  }
+
+} else {
+  console.log("Energy usage is fine!");
+}
+
+
+//3. E-commerce Cart with Inventory Management
+let products = [
+    { name: "Laptop", price: 5000, stock: 10 },
+    { name: "Smartphone", price: 2000, stock: 20 },
+    { name: "Tablet", price:3000, stock: 15 }
+];
+let cart = [
+    { name: "Laptop", quantity: 1 }, 
+    { name: "Tablet", quantity: 2 },
+    { name: "Smartphone", quantity: 2 }
+];
+function calculateTotal(cart, products) {
+    let total = 0;
+    
+//loop through each item in the cart
+for (let i=0; i < cart.length; i++) {
+    let cartItem = cart[i];
+
+//find the corresponding product in the products array
+for (let j=0; j < products.length; j++) {
+    let product = products[j];
+
+//if the product name matches the cart item name    
+if (product.name === cartItem.name) {
+    //check if the requested quantity is available in stock
+    if (cartItem.quantity <= product.stock) {
+        //calculate the total price for the cart item and add it to the total
+        total += cartItem.quantity * product.price;
+        //reduce the stock of the product by the quantity in the cart
+        product.stock -= cartItem.quantity;
+    } else {
+        console.log(`Sorry, we only have ${product.stock} ${product.name}(s) in stock.`);
+    }
+    }
+//DISCOUNT of 10% if order is greater than 10000
+if (total > 10000) {
+    total *= 0.9; // Apply a 10% discount
+}
+}
+}return total;
+}
+let totalPrice = calculateTotal(cart, products);
+console.log(`Total Price: $${totalPrice.toFixed(2)}`);
+console.log("Updated Products:", products);
