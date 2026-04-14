@@ -27,6 +27,17 @@ console.log(numbers[2]); // Output: 30
 console.log(numbers[4]); // Output: 50  
 //When we perform operations on the array, such as adding or removing elements, the JavaScript engine updates the array accordingly and manages the memory allocation as needed. 
 //Overall, arrays are executed in a way that allows us to efficiently store and manipulate collections of data in our JavaScript programs.
+//arrays with objects
+let students = [
+  { name: "Alice", age: 20 },
+    { name: "Bob", age: 22 },
+    { name: "Charlie", age: 19 }
+];
+//how are arrays with objects accessed?
+//Arrays with objects can be accessed using their index, just like regular arrays.
+//To access the properties of the objects within the array, we can use dot notation or bracket notation.
+//examples of accessing properties of objects within an array:
+console.log(students[0].name); // Output: "Alice"
 
 //what is csv?
 //CSV (Comma-Separated Values) is a simple file format used to store tabular data, such as a spreadsheet or database table. 
